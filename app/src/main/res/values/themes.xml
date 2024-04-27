@@ -6,4 +6,8 @@
     </style>
 
     <style name="Theme.ProjectEcomm" parent="Base.Theme.ProjectEcomm" />
+
+    <style name="CustomProgressBar" parent="@android:style/Widget.ProgressBar.Horizontal">
+        <item name="android:progressDrawable">@drawable/progressbar</item>
+    </style>
 </resources>
