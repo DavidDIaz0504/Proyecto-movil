@@ -6,13 +6,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
-public class login_activity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
     Button btnIniciarSesion;
     TextView tvRegistrarse;
 
@@ -28,7 +24,7 @@ public class login_activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Iniciar la actividad "activity_main"
-                startActivity(new Intent(login_activity.this, MainActivity.class));
+                startActivity(new Intent(LoginActivity.this, MainActivity.class));
                 // Finalizar esta actividad
                 finish();
             }
@@ -38,7 +34,7 @@ public class login_activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Iniciar la actividad "activity_register"
-                startActivity(new Intent(login_activity.this, register_activity.class));
+                startActivity(new Intent(LoginActivity.this, RegisterActivity.class));
                 // Finalizar esta actividad
                 finish();
             }

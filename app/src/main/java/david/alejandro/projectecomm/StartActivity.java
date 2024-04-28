@@ -13,7 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
-public class start_activity extends AppCompatActivity {
+public class StartActivity extends AppCompatActivity {
 
     private ImageView logoImageView;
     private ProgressBar progressBar;
@@ -70,7 +70,7 @@ public class start_activity extends AppCompatActivity {
 
             @Override
             public void onAnimationEnd(Animator animation) {
-                startActivity(new Intent(start_activity.this, login_activity.class));
+                startActivity(new Intent(StartActivity.this, LoginActivity.class));
                 finish();
             }
 
