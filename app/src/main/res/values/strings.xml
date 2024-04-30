@@ -8,4 +8,7 @@
     <string name="comic_anime">COMIC ANIME</string>
     <string name="ver_todo">Ver Todo...</string>
     <string name="eventos">EVENTOS!</string>
+    <string name="scanear">Scanear</string>
+    <string name="carrito">Carrito</string>
+    <string name="tu_cuenta">Tu Cuenta</string>
 </resources>
