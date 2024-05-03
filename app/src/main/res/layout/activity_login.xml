@@ -9,18 +9,19 @@
     android:background="@color/back"
     tools:context=".LoginActivity">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="300dp"
-        tools:srcCompat="@drawable/logop" />
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center_horizontal"
         android:orientation="vertical">
 
+
+        <ImageView
+            android:id="@+id/img_ca_login"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            app:srcCompat="@drawable/mockup_comic_anime__1__removebg_preview" />
 
         <TextView
             android:id="@+id/textView"
@@ -34,7 +35,7 @@
 
         <EditText
             android:id="@+id/et_correo_electronico"
-            android:layout_width="wrap_content"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="30dp"
             android:autofillHints=""
@@ -54,7 +55,7 @@
 
         <EditText
             android:id="@+id/et_password"
-            android:layout_width="wrap_content"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
             android:autofillHints=""
@@ -73,7 +74,7 @@
 
         <Button
             android:id="@+id/btn_iniciar_sesion"
-            android:layout_width="wrap_content"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:backgroundTint="@color/black"
@@ -83,35 +84,38 @@
             android:textColorLink="#000000"
             app:strokeColor="#000000" />
 
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:orientation="horizontal"
-        tools:ignore="MissingConstraints">
-
-
-        <TextView
-            android:id="@+id/textView2"
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="18dp"
-            android:layout_weight="0.01"
-            android:text="@string/no_tienes_cuenta"
-            android:textColor="@color/black"
-            android:textSize="16dp" />
 
-        <TextView
-            android:id="@+id/tv_registrarse"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.2"
-            android:text="@string/crear_una"
-            android:textColor="@color/white"
-            android:textSize="16dp"
-            tools:ignore="TextSizeCheck" />
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            tools:ignore="MissingConstraints">
+
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_weight="1"
+                android:paddingEnd="8dp"
+                android:text="@string/no_tienes_cuenta"
+                android:textColor="@color/black"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/tv_registrarse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/crear_una"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                tools:ignore="TextSizeCheck" />
+
+        </LinearLayout>
 
     </LinearLayout>
+
 </LinearLayout>

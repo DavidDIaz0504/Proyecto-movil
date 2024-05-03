@@ -1,11 +1,13 @@
 <resources>
-    <string name="app_name">projectEcomm</string>
-    <string name="crear_una">Crear una</string>
+    <string name="app_name">ComicAnime</string>
+    <string name="crear_una">Crea una</string>
     <string name="iniciar_sesion">Iniciar Sesion</string>
     <string name="no_tienes_cuenta">¿No tienes cuenta?</string>
     <string name="contrase_a">Contraseña</string>
     <string name="correo_electronico">Correo Electronico</string>
+
     <string name="comic_anime">COMIC ANIME</string>
+
     <string name="ver_todo">Ver Todo...</string>
     <string name="eventos">EVENTOS!</string>
     <string name="scanear">Scanear</string>
