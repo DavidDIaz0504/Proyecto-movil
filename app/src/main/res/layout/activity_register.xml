@@ -11,9 +11,9 @@
     tools:context=".register_activity">
 
     <ImageView
-        android:id="@+id/img_registe_goat"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:id="@+id/img_register_goat"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
         android:paddingTop="20dp"
         app:srcCompat="@drawable/mockup_comic_anime_removebg_preview" />
     <LinearLayout
@@ -32,12 +32,13 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
             android:layout_weight="0.01"
+            android:paddingEnd="8dp"
             android:text="¿Tienes Cuenta?"
             android:textColor="@color/black"
             android:textSize="16dp" />
 
         <TextView
-            android:id="@+id/tv_registrarse"
+            android:id="@+id/tv_login"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0.2"
@@ -53,7 +54,7 @@
         android:layout_height="match_parent"
         android:gravity="center_horizontal"
         android:orientation="vertical"
-        android:paddingTop="50dp">
+        android:paddingTop="35dp">
 
         <TextView
             android:id="@+id/et_name_register"
@@ -140,6 +141,18 @@
             android:textColorHighlight="@color/light"
             android:textColorHint="@color/light"
             tools:ignore="LabelFor" />
+
+        <Button
+            android:id="@+id/btn_crear_cuenta"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/black"
+            android:gravity="center"
+            android:text="Crear Cuenta!"
+            android:textColor="@color/light"
+            android:textColorLink="#000000"
+            app:strokeColor="#000000" />
 
     </LinearLayout>
 </LinearLayout>
