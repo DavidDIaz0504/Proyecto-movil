@@ -1,15 +1,12 @@
 package david.alejandro.projectecomm;
 
-import android.animation.Animator;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
-import android.content.Intent;
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.widget.ImageView;
-import android.widget.ProgressBar;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
@@ -32,7 +29,7 @@ public class StartActivity extends AppCompatActivity {
     }
 
     private void iniciarAnimacion() {
-        int animationDuration = 5000; // Total duration of animations
+        // Total duration of animations
 
         ObjectAnimator fadeIn = ObjectAnimator.ofFloat(logoImageView, "alpha", 0f, 1f);
         fadeIn.setDuration(1500);
@@ -46,15 +43,10 @@ public class StartActivity extends AppCompatActivity {
         ObjectAnimator fadeOut = ObjectAnimator.ofFloat(logoImageView, "alpha", 1f, 0f);
         fadeOut.setDuration(1000);
 
-        AnimatorSet conjuntoAnimacion = new AnimatorSet();
+        @SuppressLint("Recycle") AnimatorSet conjuntoAnimacion = new AnimatorSet();
         conjuntoAnimacion.playSequentially(fadeIn, colorFondo, fadeOut);
 
-        colorFondo.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
-            @Override
-            public void onAnimationUpdate(ValueAnimator animator) {
-                findViewById(R.id.fondoView_start).setBackgroundColor((Integer) animator.getAnimatedValue());
-            }
-        });
+        colorFondo.addUpdateListener(animator -> findViewById(R.id.fondoView_start).setBackgroundColor((Integer) animator.getAnimatedValue()));
     }
 
 }
