@@ -21,21 +21,5 @@
         android:layout_centerInParent="true"
         android:src="@drawable/logop" />
 
-    <ProgressBar
-        android:id="@+id/progressBar"
-        style="@style/CustomProgressBar"
-        android:layout_width="200dp"
-        android:layout_height="20dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="103dp"
-        android:layout_marginTop="460dp"
-        android:layout_marginEnd="108dp"
-        android:layout_marginBottom="250dp"
-        android:foregroundGravity="center_horizontal"
-        android:indeterminateDrawable="@drawable/progressbarback"
-        android:progress="0" />
 </RelativeLayout>
 

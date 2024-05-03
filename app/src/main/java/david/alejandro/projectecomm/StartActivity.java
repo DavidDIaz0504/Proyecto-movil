@@ -24,7 +24,6 @@ public class StartActivity extends AppCompatActivity {
         setContentView(R.layout.activity_start);
 
         logoImageView = findViewById(R.id.logo_start);
-        progressBar = findViewById(R.id.progressBar);
     }
 
     @Override
@@ -57,33 +56,7 @@ public class StartActivity extends AppCompatActivity {
                 findViewById(R.id.fondoView_start).setBackgroundColor((Integer) animator.getAnimatedValue());
             }
         });
-
-        ValueAnimator progressAnimator = ValueAnimator.ofInt(0, 100);
-        progressAnimator.setDuration(animationDuration);
-        progressAnimator.addUpdateListener(animation -> progressBar.setProgress((Integer) animation.getAnimatedValue()));
-
-        conjuntoAnimacion.addListener(new Animator.AnimatorListener() {
-            @Override
-            public void onAnimationStart(@NonNull Animator animation) {
-                progressAnimator.start();
-            }
-
-            @Override
-            public void onAnimationEnd(Animator animation) {
-                startActivity(new Intent(StartActivity.this, LoginActivity.class));
-                finish();
-            }
-
-            @Override
-            public void onAnimationCancel(@NonNull Animator animation) {
-            }
-
-            @Override
-            public void onAnimationRepeat(@NonNull Animator animation) {
-            }
-        });
-
-        conjuntoAnimacion.start();
     }
+
 }
 
