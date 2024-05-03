@@ -16,7 +16,6 @@ import androidx.core.content.ContextCompat;
 public class StartActivity extends AppCompatActivity {
 
     private ImageView logoImageView;
-    private ProgressBar progressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
