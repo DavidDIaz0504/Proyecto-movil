@@ -2,13 +2,11 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/back"
     android:orientation="vertical"
-    android:paddingTop="6dp"
-    tools:context=".RolActivity">
+    android:paddingTop="6dp">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -28,7 +26,7 @@
                 android:textAlignment="center"
                 android:textSize="24sp"
                 android:textStyle="bold"
-                tools:textColor="@color/light" />
+                android:textColor="@color/light" />
 
             <TextView
                 android:id="@+id/tv_vendor_title"
@@ -37,7 +35,9 @@
                 android:gravity="center_horizontal"
                 android:text="Vendedor"
                 android:textSize="40sp"
-                tools:textColor="@color/light" />
+                android:textColor="@color/light" />
+
+
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -67,8 +67,8 @@
                         android:paddingTop="50dp"
                         android:text="El rol de vendedor es para poder brindarte informacion de algun articulo, objeto o mercancia que queiras vender por medio de nosotros para poder impulsar tu emprendimiento u producto"
                         android:textAlignment="center"
-                        tools:paddingBottom="20dp"
-                        tools:textColor="@color/light" />
+                        android:paddingBottom="20dp"
+                        android:textColor="@color/light" />
 
                     <Button
                         android:id="@+id/btn_vendor_rol"
@@ -130,7 +130,7 @@
                             android:paddingBottom="20dp"
                             android:text="El rol de usuario es por si quieres usar nuestra aplicación para poder adquirir productos y estar al tanto de los últimos eventos o convenciones cerca de ti o relacionada a tus gustos en todo el mundo :D"
                             android:textAlignment="center"
-                            tools:textColor="@color/light" />
+                            android:textColor="@color/light" />
 
                         <Button
                             android:id="@+id/btn_user_rol"
