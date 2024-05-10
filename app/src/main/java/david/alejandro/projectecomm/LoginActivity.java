@@ -64,7 +64,7 @@ public class LoginActivity extends AppCompatActivity {
                     Toast.makeText(LoginActivity.this, "Debe rellenar todos los campos", Toast.LENGTH_SHORT).show();
                 } else {
                     // Mostrar Toast de éxito
-                    Toast.makeText(LoginActivity.this, "Cuenta creada satisfactoriamente", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginActivity.this, "Iniciaste sesion correctamente", Toast.LENGTH_SHORT).show();
 
                     // Si no hay campos vacíos, procede con el registro
                     Intent intent = new Intent(LoginActivity.this, MainActivity.class);
