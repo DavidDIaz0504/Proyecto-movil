@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "627871352972",
+    "project_id": "comic-anime-2f704",
+    "storage_bucket": "comic-anime-2f704.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:627871352972:android:63d65eab6c06630e5913a9",
+        "android_client_info": {
+          "package_name": "david.alejandro.projectecomm"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD_0hBTxJBRhdrPuOtRnqKRchUDDIE_cZQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
