@@ -6,7 +6,7 @@
     android:orientation="vertical"
     >
     <com.google.android.material.card.MaterialCardView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         style="@style/CardView"
         app:cardElevation="8dp"
@@ -24,11 +24,11 @@
                 android:id="@+id/iv_product"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
-                app:srcCompat="@drawable/scanner" />
+                app:srcCompat="@drawable/anillos" />
 
             <TextView
                 android:id="@+id/tv_name_product_item"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="computador_asus"
                 android:textAppearance="?attr/textAppearanceTitleMedium" />
