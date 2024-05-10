@@ -1,9 +1,11 @@
 package david.alejandro.projectecomm;
 
+import android.animation.Animator;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageView;
 
@@ -48,6 +50,7 @@ public class StartActivity extends AppCompatActivity {
 
         colorFondo.addUpdateListener(animator -> findViewById(R.id.fondoView_start).setBackgroundColor((Integer) animator.getAnimatedValue()));
     }
+
 
 }
 
