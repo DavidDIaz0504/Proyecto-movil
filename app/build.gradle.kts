@@ -1,5 +1,6 @@
 plugins {
     alias(libs.plugins.androidApplication)
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -34,6 +35,8 @@ dependencies {
     implementation(libs.material)
     implementation(libs.activity)
     implementation(libs.constraintlayout)
+    implementation(libs.firebase.firestore)
+    //implementation ("com.github.denzcoskun:ImageSlideshow:0.1.2")
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
@@ -41,6 +44,6 @@ dependencies {
     implementation ("com.github.denzcoskun:ImageSlideshow:0.1.2")
     //implementacion de picasso
     implementation ("com.squareup.picasso:picasso:2.8")
-
+    implementation("com.github.denzcoskun:ImageSlideshow:0.1.2")
 
 }
