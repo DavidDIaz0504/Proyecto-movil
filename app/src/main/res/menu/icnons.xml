@@ -2,14 +2,14 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/page_count"
-        android:icon="@android:drawable/ic_menu_my_calendar"
+        android:icon="@drawable/loginn"
         android:title="@string/tu_cuenta" />
     <item
         android:id="@+id/page_Scanner"
-        android:icon="@android:drawable/ic_menu_view"
+        android:icon="@drawable/scan"
         android:title="@string/scanear" />
     <item
         android:id="@+id/page_Carrito"
-        android:icon="@android:drawable/btn_star_big_off"
+        android:icon="@drawable/cart"
         android:title="@string/carrito" />
 </menu>

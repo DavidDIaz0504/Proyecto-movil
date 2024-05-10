@@ -38,7 +38,7 @@ public class StartActivity extends AppCompatActivity {
                 ContextCompat.getColor(this, R.color.back),
                 ContextCompat.getColor(this, R.color.back)
         );
-        colorFondo.setDuration(2500);
+        colorFondo.setDuration(1000);
 
         ObjectAnimator fadeOut = ObjectAnimator.ofFloat(logoImageView, "alpha", 1f, 0f);
         fadeOut.setDuration(1000);
