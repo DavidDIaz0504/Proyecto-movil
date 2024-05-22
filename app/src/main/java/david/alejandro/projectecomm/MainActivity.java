@@ -38,9 +38,9 @@ public class MainActivity extends AppCompatActivity {
         loadFakeData();
         //slider de eventos
         imageSlider = findViewById(R.id.event_slider_home);
-        eventList.add(new SlideModel("https://bit.ly/2YoJ77H", "The animal population decreased by 58 percent in 42 years.", ScaleTypes.FIT));
-        eventList.add(new SlideModel("https://bit.ly/2BteuF2", "Elephants and tigers may become extinct.", ScaleTypes.FIT));
-        eventList.add(new SlideModel("https://bit.ly/3fLJf72", "And people do that.", ScaleTypes.FIT));
+        eventList.add(new SlideModel("https://img.freepik.com/vector-gratis/plantilla-detallada-banner-anime_52683-66691.jpg", "...", ScaleTypes.FIT));
+        eventList.add(new SlideModel("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEjHSULWlBnAIf2pDueXARrU_NnFxkaEpC4vYd-YcsCg&s", "..", ScaleTypes.FIT));
+        eventList.add(new SlideModel("https://t4.ftcdn.net/jpg/04/04/73/39/360_F_404733910_2mIXr6RbC5G3WZJFjopVsBaR3EOM6Bqy.jpg", ".", ScaleTypes.FIT));
         imageSlider.setImageList(eventList);
 
         //recycle view productos
