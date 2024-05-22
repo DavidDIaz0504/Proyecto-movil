@@ -27,14 +27,16 @@
             app:title="@string/scanear"
             app:titleTextColor="@color/light" />
 
-    </com.google.android.material.appbar.AppBarLayout>
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/back"
+            app:menu="@menu/icnons">
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        app:srcCompat="@drawable/mantenimiento" />
+
+        </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+    </com.google.android.material.appbar.AppBarLayout>
 
 
 </LinearLayout>

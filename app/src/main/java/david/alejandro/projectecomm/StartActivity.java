@@ -29,8 +29,6 @@ public class StartActivity extends AppCompatActivity {
     }
 
     private void iniciarAnimacion() {
-        // Total duration of animations
-
         ObjectAnimator fadeIn = ObjectAnimator.ofFloat(logoImageView, "alpha", 0f, 1f);
         fadeIn.setDuration(1500);
 
@@ -38,17 +36,44 @@ public class StartActivity extends AppCompatActivity {
                 ContextCompat.getColor(this, R.color.back),
                 ContextCompat.getColor(this, R.color.back)
         );
-        colorFondo.setDuration(2500);
+        colorFondo.setDuration(1000);
 
         ObjectAnimator fadeOut = ObjectAnimator.ofFloat(logoImageView, "alpha", 1f, 0f);
         fadeOut.setDuration(1000);
 
-        @SuppressLint("Recycle") AnimatorSet conjuntoAnimacion = new AnimatorSet();
+        AnimatorSet conjuntoAnimacion = new AnimatorSet();
         conjuntoAnimacion.playSequentially(fadeIn, colorFondo, fadeOut);
 
+        // Updating the background color with animation update listener
         colorFondo.addUpdateListener(animator -> findViewById(R.id.fondoView_start).setBackgroundColor((Integer) animator.getAnimatedValue()));
+
+        // Set Animator Listener to start LoginActivity when animation ends
+        conjuntoAnimacion.addListener(new Animator.AnimatorListener() {
+            @Override
+            public void onAnimationStart(Animator animator) {
+                // Actions to do at the start of the animation
+            }
+
+            @Override
+            public void onAnimationEnd(Animator animator) {
+                // Start LoginActivity when animation ends
+                startActivity(new Intent(StartActivity.this, LoginActivity.class));
+                finish();
+            }
+
+            @Override
+            public void onAnimationCancel(Animator animator) {
+                // Actions to do if the animation is canceled
+            }
+
+            @Override
+            public void onAnimationRepeat(Animator animator) {
+                // Actions to do on animation repeat
+            }
+        });
+
+        conjuntoAnimacion.start();
     }
-
-
 }
+
 
