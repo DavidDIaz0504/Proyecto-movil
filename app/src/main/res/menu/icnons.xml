@@ -6,11 +6,11 @@
         android:title="@string/tu_cuenta"
         />
     <item
-        android:id="@+id/page_Scanner"
+        android:id="@+id/page_scanner"
         android:icon="@drawable/scanner"
         android:title="@string/scanear" />
     <item
-        android:id="@+id/page_Carrito"
+        android:id="@+id/page_carrito"
         android:icon="@drawable/carrito"
         android:title="@string/carrito" />
 </menu>
