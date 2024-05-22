@@ -29,7 +29,6 @@ public class MainActivity extends AppCompatActivity {
     private ImageSlider imageSlider;
     private RecyclerView rvProductsMain;
     private BottomAppBar bnTienda;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,7 +41,6 @@ public class MainActivity extends AppCompatActivity {
         eventList.add(new SlideModel("https://bit.ly/2BteuF2", "Elephants and tigers may become extinct.", ScaleTypes.FIT));
         eventList.add(new SlideModel("https://bit.ly/3fLJf72", "And people do that.", ScaleTypes.FIT));
         imageSlider.setImageList(eventList);
-
         //recycle view productos
         rvProductsMain = findViewById(R.id.rv_products_main);
         ProductAdapter myAdapter = new ProductAdapter(listProducts);
@@ -57,7 +55,6 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-
         bnTienda.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
@@ -81,7 +78,6 @@ public class MainActivity extends AppCompatActivity {
 
         });
     }
-
     private void loadFakeData() {
         Product product1 = new Product("Computador Asus", " El mejor computador Gamer que puedes comprar ", 11000000.0, "https://rampcrosario.com/wp-content/uploads/2019/03/pc-gamer.png");
         Product product2 = new Product("Teclado Asus ", " El mejor teclado Gamer que puedes comprar ", 100000.0, "https://d22fxaf9t8d39k.cloudfront.net/f65ad7c8036f1e99b17e1e3fbcd89625026e26a0e81e4af34b1dc8b0cf7d235c169554.png");
