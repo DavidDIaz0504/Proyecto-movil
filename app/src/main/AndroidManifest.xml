@@ -13,9 +13,6 @@
         android:theme="@style/Theme.ProjectEcomm"
         tools:targetApi="31">
         <activity
-            android:name=".AccountActivity"
-            android:exported="false" />
-        <activity
             android:name=".RolActivity"
             android:exported="false" />
         <activity
