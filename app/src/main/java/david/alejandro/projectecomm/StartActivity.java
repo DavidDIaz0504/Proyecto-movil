@@ -15,7 +15,6 @@ import androidx.core.content.ContextCompat;
 public class StartActivity extends AppCompatActivity {
 
     private ImageView logoImageView;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,7 +22,6 @@ public class StartActivity extends AppCompatActivity {
 
         logoImageView = findViewById(R.id.logo_start);
     }
-
     @Override
     protected void onStart() {
         super.onStart();
