@@ -13,4 +13,6 @@
     <string name="scanear">Scanear</string>
     <string name="carrito">Carrito</string>
     <string name="tu_cuenta">Tu Cuenta</string>
+    <string name="iv_visor">Visor</string>
+    <string name="btn_scan">Scanear</string>
 </resources>

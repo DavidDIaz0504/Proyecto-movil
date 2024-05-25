@@ -8,6 +8,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.google.android.material.appbar.MaterialToolbar;
+
 public class CartShoppingActivity extends AppCompatActivity {
 
     @Override
@@ -15,5 +17,16 @@ public class CartShoppingActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cart_shopping);
 
+        // Referencia a la toolbar
+        MaterialToolbar toolbar = findViewById(R.id.tb_cart);
+
+        // Establecer la toolbar como ActionBar
+        setSupportActionBar(toolbar);
+
+        // Añadir el Listener al botón de navegación
+        toolbar.setNavigationOnClickListener(v -> {
+            // Finaliza la actividad
+            finish();
+        });
     }
 }
