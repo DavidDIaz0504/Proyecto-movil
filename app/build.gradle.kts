@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.androidApplication)
     id("com.google.gms.google-services")
+
 }
 
 android {
@@ -44,6 +45,6 @@ dependencies {
     implementation ("com.github.denzcoskun:ImageSlideshow:0.1.2")
     //implementacion de picasso
     implementation ("com.squareup.picasso:picasso:2.8")
-    implementation("com.github.denzcoskun:ImageSlideshow:0.1.2")
+
 
 }
