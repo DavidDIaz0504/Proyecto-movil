@@ -11,14 +11,14 @@ import androidx.core.view.WindowInsetsCompat;
 import com.google.android.material.appbar.MaterialToolbar;
 
 public class ScannerActivity extends AppCompatActivity {
-
+MaterialToolbar toolbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scanner);
 
         // Referencia a la toolbar
-        MaterialToolbar toolbar = findViewById(R.id.tb_category);
+         toolbar = findViewById(R.id.tb_category);
 
         // Establecer la toolbar como ActionBar
         setSupportActionBar(toolbar);

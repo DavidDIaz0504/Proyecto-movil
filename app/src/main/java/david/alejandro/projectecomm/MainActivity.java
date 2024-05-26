@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
     private ArrayList<Product> listProducts = new ArrayList<>();
     private ImageSlider imageSlider;
     private RecyclerView rvProductsMain;
-    private BottomAppBar bnTienda;
+    private BottomNavigationView bnTienda;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,13 +51,26 @@ public class MainActivity extends AppCompatActivity {
         rvProductsMain.setLayoutManager(myStaged);
         //barra de navegacion
         bnTienda = findViewById(R.id.bottom_navigation_tienda);
-        bnTienda.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
 
+        bnTienda.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(MenuItem item) {
+                int itemId = item.getItemId();
+                if (itemId == R.id.page_count) {
+                    startActivity(new Intent(MainActivity.this, ProfileActivity.class));
+                    return true;
+                } else if (itemId == R.id.page_scanner) {
+                    startActivity(new Intent(MainActivity.this, ScannerActivity.class));
+                    return true;
+                } else if (itemId == R.id.page_carrito) {
+                    startActivity(new Intent(MainActivity.this, CartShoppingActivity.class));
+                    return true;
+                } else {
+                    return false;
+                }
             }
         });
-
+/*
         bnTienda.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
@@ -79,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
                 return false;
             }
 
-        });
+        });*/
     }
 
     private void loadFakeData() {
