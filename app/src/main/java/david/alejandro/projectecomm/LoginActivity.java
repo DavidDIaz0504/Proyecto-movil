@@ -9,6 +9,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -23,11 +24,18 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class LoginActivity extends AppCompatActivity {
-    Button btnIniciarSesion;
-    TextView tvRegistrarse;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 
-    EditText etmail, etpswrd;
+public class LoginActivity extends AppCompatActivity {
+    private Button btnIniciarSesion;
+    private TextView tvRegistrarse;
+
+    private EditText etmail, etpswrd;
+    private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,28 +45,26 @@ public class LoginActivity extends AppCompatActivity {
         tvRegistrarse = findViewById(R.id.tv_registrarse);
         etmail = findViewById(R.id.et_correo_electronico);
         etpswrd = findViewById(R.id.et_password);
+        // Initialize Firebase Auth
+        mAuth = FirebaseAuth.getInstance();
 
         btnIniciarSesion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // Obtiene el texto de los EditText
-                String email = etmail.toString().trim();
+                String email = etmail.getText().toString().trim();
                 String password = etpswrd.getText().toString().trim();
 
                 // Verifica si los campos están vacíos y cambia los fondos si es necesario
-                if (email.isEmpty()) {
+                if (email.isEmpty() && password.isEmpty() ) {
                     etmail.setBackgroundResource(R.drawable.edit_text_border);
-                } else {
-                    etmail.setBackgroundResource(R.drawable.shape_contorno);
-                }
-                if (password.isEmpty()) {
                     etpswrd.setBackgroundResource(R.drawable.edit_text_border);
+                    Toast.makeText(LoginActivity.this, "Por Favor Ingrese los Datos", Toast.LENGTH_SHORT).show();
                 } else {
-                    etpswrd.setBackgroundResource(R.drawable.shape_contorno);
+                  loginUser(email  , password);
                 }
-
                 // Verifica si algún campo está vacío
-                if (email.isEmpty() || password.isEmpty()) {
+             /*   if (email.isEmpty() || password.isEmpty()) {
                     Toast.makeText(LoginActivity.this, "Debe rellenar todos los campos", Toast.LENGTH_SHORT).show();
                 } else {
                     // Mostrar Toast de éxito
@@ -68,7 +74,7 @@ public class LoginActivity extends AppCompatActivity {
                     Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                     startActivity(intent);
                     finish();
-                }
+                }*/
 
 
             }
@@ -83,4 +89,27 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
     }
+private void loginUser(String email, String password){
+
+        mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                if(task.isSuccessful()){
+                    finish();
+                    startActivity(new Intent(LoginActivity.this, MainActivity.class));
+                    Toast.makeText(LoginActivity.this, "Bienvenido", Toast.LENGTH_SHORT).show();
+                }else {
+                    Toast.makeText(LoginActivity.this, "Error", Toast.LENGTH_SHORT).show();
+                }
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Toast.makeText(LoginActivity.this, "Error al iniciar sesion", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+}
+
+
 }
