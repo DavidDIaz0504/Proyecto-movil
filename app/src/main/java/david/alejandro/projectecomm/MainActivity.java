@@ -20,10 +20,6 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 //import android.support.design.widget.BottomAppBar;
 import android.view.MenuItem;
 import android.view.View;
-<<<<<<< HEAD
-=======
-import android.widget.TextView;
->>>>>>> David
 
 import java.util.ArrayList;
 
@@ -32,56 +28,19 @@ public class MainActivity extends AppCompatActivity {
     private ArrayList<Product> listProducts = new ArrayList<>();
     private ImageSlider imageSlider;
     private RecyclerView rvProductsMain;
-<<<<<<< HEAD
-    private BottomAppBar bnTienda;
-=======
     private BottomNavigationView bnTienda;
-    private TextView tvEventMain;
-    private TextView tvStoreMain;
->>>>>>> David
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-<<<<<<< HEAD
         //cargar informacion falsa
-=======
-
-        tvEventMain = findViewById(R.id.tv_event_seeall);
-        tvStoreMain = findViewById(R.id.tv_shop_seeall);
-
-        tvEventMain.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // Navigate to EventActivity
-                Intent intent = new Intent(MainActivity.this, EventsActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        tvStoreMain.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // Navigate to ShopActivity
-                Intent intent = new Intent(MainActivity.this, ShopActivity.class);
-                startActivity(intent);
-            }
-        });
-
->>>>>>> David
         loadFakeData();
         //slider de eventos
         imageSlider = findViewById(R.id.event_slider_home);
-<<<<<<< HEAD
         eventList.add(new SlideModel("https://img.freepik.com/vector-gratis/plantilla-detallada-banner-anime_52683-66691.jpg", "...", ScaleTypes.FIT));
         eventList.add(new SlideModel("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEjHSULWlBnAIf2pDueXARrU_NnFxkaEpC4vYd-YcsCg&s", "..", ScaleTypes.FIT));
         eventList.add(new SlideModel("https://t4.ftcdn.net/jpg/04/04/73/39/360_F_404733910_2mIXr6RbC5G3WZJFjopVsBaR3EOM6Bqy.jpg", ".", ScaleTypes.FIT));
-=======
-        eventList.add(new SlideModel("https://img.freepik.com/vector-gratis/diseno-plantilla-banner-rectangulo-festival-anime-otaku_742173-4924.jpg?size=626&ext=jpg&ga=GA1.1.1319243779.1711411200&semt=ais", ScaleTypes.FIT));
-        eventList.add(new SlideModel("https://d1csarkz8obe9u.cloudfront.net/posterpreviews/anime-event-flyer-design-facebook-template-0def29cd5467ccbd8fe67424599bfd7e_screen.jpg?ts=1660392266",  ScaleTypes.FIT));
-        eventList.add(new SlideModel("https://img.freepik.com/vector-gratis/banner-anime-fuera-linea-twitch_79603-2016.jpg?size=626&ext=jpg&ga=GA1.1.1319243779.1711411200&semt=ais",  ScaleTypes.FIT));
->>>>>>> David
         imageSlider.setImageList(eventList);
 
         //recycle view productos
@@ -92,13 +51,26 @@ public class MainActivity extends AppCompatActivity {
         rvProductsMain.setLayoutManager(myStaged);
         //barra de navegacion
         bnTienda = findViewById(R.id.bottom_navigation_tienda);
-        bnTienda.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
 
+        bnTienda.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(MenuItem item) {
+                int itemId = item.getItemId();
+                if (itemId == R.id.page_count) {
+                    startActivity(new Intent(MainActivity.this, ProfileActivity.class));
+                    return true;
+                } else if (itemId == R.id.page_scanner) {
+                    startActivity(new Intent(MainActivity.this, ScannerActivity.class));
+                    return true;
+                } else if (itemId == R.id.page_carrito) {
+                    startActivity(new Intent(MainActivity.this, CartShoppingActivity.class));
+                    return true;
+                } else {
+                    return false;
+                }
             }
         });
-
+/*
         bnTienda.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
@@ -120,38 +92,33 @@ public class MainActivity extends AppCompatActivity {
                 return false;
             }
 
-        });
+        });*/
     }
 
     private void loadFakeData() {
-        Product product1 = new Product("Bolso OnePiece", " hoi ", 100000.00,"https://m.media-amazon.com/images/I/51XRvih20sL.__AC_SX300_SY300_QL70_FMwebp_.jpg");
-        Product product2 = new Product("Mochila Totoro", "UNA BOLSO DE TOTOROO :0", 100000.0, "https://m.media-amazon.com/images/I/71jn1tRUlBL._AC_SY500_.jpg");
-        Product product3 = new Product("Teclado Gamer", " Severo teclado COmpralo", 7000000.0, "https://m.media-amazon.com/images/I/71WBwf2mkXL._AC_SL1500_.jpg");
-        Product product4 = new Product("Cosmetiquera", " hoi ", 100000.00,"https://m.media-amazon.com/images/I/51VctPhsYDL._AC_SL1500_.jpg");
-        Product product5 = new Product("Pocillo Anime", "Paque tomes tintico", 100000.0, "https://m.media-amazon.com/images/I/71uiLhG24SL._AC_SL1500_.jpg");
-        Product product6 = new Product("Powerbank 1000wts", " Compralo pa ver si asi no se te descarga a cada rato el iphone", 7000000.0, "https://m.media-amazon.com/images/I/71BiMUM7X0L._AC_SL1500_.jpg");
-        Product product7 = new Product("Paleta de sombras", " Tremenda? ", 100000.00,"https://m.media-amazon.com/images/I/71PF5pOgNVL._SL1500_.jpg");
-        Product product8 = new Product("Buzo Anime", "Pal frio que hace ahorita", 100000.0, "https://m.media-amazon.com/images/I/71S6sufXhBL._AC_SX522_.jpg");
-        Product product9 = new Product("Anillos Akatsuki", " Dattebayo?", 7000000.0, "https://m.media-amazon.com/images/I/61cqA8A13EL._AC_SY500_.jpg");
-        Product product10 = new Product("Gorro Anime", " un pasamontañas pal frio ", 100000.00,"https://m.media-amazon.com/images/I/513jRXv5geL._AC_.jpg");
+        Product product1 = new Product("Computador Asus", " El mejor computador Gamer que puedes comprar ", 11000000.0, "https://rampcrosario.com/wp-content/uploads/2019/03/pc-gamer.png");
+        Product product2 = new Product("Teclado Asus ", " El mejor teclado Gamer que puedes comprar ", 100000.0, "https://d22fxaf9t8d39k.cloudfront.net/f65ad7c8036f1e99b17e1e3fbcd89625026e26a0e81e4af34b1dc8b0cf7d235c169554.png");
+        Product product3 = new Product("Celular Rog", " El mejor celular Gamer que puedes comprar ", 7000000.0, "https://dlcdnwebimgs.asus.com/gain/FB338DAC-B312-4D25-A7A3-DBDBDBC123CA");
         listProducts.add(product1);
         listProducts.add(product2);
         listProducts.add(product3);
-        listProducts.add(product4);
-        listProducts.add(product5);
-        listProducts.add(product6);
-        listProducts.add(product7);
-        listProducts.add(product8);
-        listProducts.add(product9);
-        listProducts.add(product10);
-
+        listProducts.add(product1);
+        listProducts.add(product2);
+        listProducts.add(product3);
+        listProducts.add(product1);
+        listProducts.add(product2);
+        listProducts.add(product3);
+        listProducts.add(product1);
+        listProducts.add(product2);
+        listProducts.add(product3);
+        listProducts.add(product1);
+        listProducts.add(product2);
+        listProducts.add(product3);
+        listProducts.add(product1);
+        listProducts.add(product2);
+        listProducts.add(product3);
+        listProducts.add(product1);
+        listProducts.add(product2);
+        listProducts.add(product3);
     }
-<<<<<<< HEAD
 }
-=======
-}
-
-
-
-
->>>>>>> David
