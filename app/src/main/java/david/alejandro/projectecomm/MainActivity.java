@@ -10,6 +10,9 @@ import com.denzcoskun.imageslider.constants.ScaleTypes;
 import com.denzcoskun.imageslider.models.SlideModel;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
+
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
@@ -18,11 +21,34 @@ public class MainActivity extends AppCompatActivity {
     private ImageSlider imageSlider;
     private RecyclerView rvProductsMain;
     private BottomNavigationView bnTienda;
+    private TextView tvEventMain;
+    private TextView tvStoreMain;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        tvEventMain = findViewById(R.id.tv_event_seeall);
+        tvStoreMain = findViewById(R.id.tv_shop_seeall);
+
+        tvEventMain.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Navigate to EventActivity
+                Intent intent = new Intent(MainActivity.this, EventsActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        tvStoreMain.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Navigate to ShopActivity
+                Intent intent = new Intent(MainActivity.this, ShopActivity.class);
+                startActivity(intent);
+            }
+        });
 
         loadFakeData();
 
@@ -60,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void loadFakeData() {
-        Product product1 = new Product("Bolso Akatsuki", " hoi ", 11000000.0,"https://m.media-amazon.com/images/I/51XRvih20sL.__AC_SX300_SY300_QL70_FMwebp_.jpg");
+        Product product1 = new Product("Bolso OnePiece", " hoi ", 100000.00,"https://m.media-amazon.com/images/I/51XRvih20sL.__AC_SX300_SY300_QL70_FMwebp_.jpg");
         Product product2 = new Product("Mochila Totoro", "UNA BOLSO DE TOTOROO :0", 100000.0, "https://m.media-amazon.com/images/I/71jn1tRUlBL._AC_SY500_.jpg");
         Product product3 = new Product("Teclado Gamer", " Severo teclado COmpralo", 7000000.0, "https://m.media-amazon.com/images/I/71WBwf2mkXL._AC_SL1500_.jpg");
         listProducts.add(product1);

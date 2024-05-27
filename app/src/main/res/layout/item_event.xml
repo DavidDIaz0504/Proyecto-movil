@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/CardView"
+        app:cardElevation="8dp"
+        app:cardCornerRadius="16dp"
+        android:layout_margin="8dp"
+
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/iv_event"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_weight="0"
+                app:srcCompat="@drawable/event1" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_add_event"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/back"
+                    android:text="agregar"
+                    android:textColor="@color/light"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/iv_like"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="0"
+                    app:srcCompat="@drawable/like" />
+
+                <ImageView
+                    android:id="@+id/iv_fav"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="0"
+                    app:srcCompat="@drawable/star_grey" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+</LinearLayout>

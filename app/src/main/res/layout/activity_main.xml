@@ -38,7 +38,7 @@
             android:textSize="18dp" />
 
         <TextView
-            android:id="@+id/tv_event_main"
+            android:id="@+id/tv_event_seeall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -81,7 +81,7 @@
             android:textSize="18dp" />
 
         <TextView
-            android:id="@+id/tv_store_main"
+            android:id="@+id/tv_shop_seeall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
