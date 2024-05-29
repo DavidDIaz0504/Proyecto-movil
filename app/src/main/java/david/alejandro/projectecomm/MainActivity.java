@@ -127,27 +127,24 @@ public class MainActivity extends AppCompatActivity {
         Product product1 = new Product("Bolso OnePiece", " hoi ", 100000.00,"https://m.media-amazon.com/images/I/51XRvih20sL.__AC_SX300_SY300_QL70_FMwebp_.jpg");
         Product product2 = new Product("Mochila Totoro", "UNA BOLSO DE TOTOROO :0", 100000.0, "https://m.media-amazon.com/images/I/71jn1tRUlBL._AC_SY500_.jpg");
         Product product3 = new Product("Teclado Gamer", " Severo teclado COmpralo", 7000000.0, "https://m.media-amazon.com/images/I/71WBwf2mkXL._AC_SL1500_.jpg");
+        Product product4 = new Product("Cosmetiquera", " hoi ", 100000.00,"https://m.media-amazon.com/images/I/51VctPhsYDL._AC_SL1500_.jpg");
+        Product product5 = new Product("Pocillo Anime", "Paque tomes tintico", 100000.0, "https://m.media-amazon.com/images/I/71uiLhG24SL._AC_SL1500_.jpg");
+        Product product6 = new Product("Powerbank 1000wts", " Compralo pa ver si asi no se te descarga a cada rato el iphone", 7000000.0, "https://m.media-amazon.com/images/I/71BiMUM7X0L._AC_SL1500_.jpg");
+        Product product7 = new Product("Paleta de sombras", " Tremenda? ", 100000.00,"https://m.media-amazon.com/images/I/71PF5pOgNVL._SL1500_.jpg");
+        Product product8 = new Product("Buzo Anime", "Pal frio que hace ahorita", 100000.0, "https://m.media-amazon.com/images/I/71S6sufXhBL._AC_SX522_.jpg");
+        Product product9 = new Product("Anillos Akatsuki", " Dattebayo?", 7000000.0, "https://m.media-amazon.com/images/I/61cqA8A13EL._AC_SY500_.jpg");
+        Product product10 = new Product("Gorro Anime", " un pasamontañas pal frio ", 100000.00,"https://m.media-amazon.com/images/I/513jRXv5geL._AC_.jpg");
         listProducts.add(product1);
         listProducts.add(product2);
         listProducts.add(product3);
-        listProducts.add(product1);
-        listProducts.add(product2);
-        listProducts.add(product3);
-        listProducts.add(product1);
-        listProducts.add(product2);
-        listProducts.add(product3);
-        listProducts.add(product1);
-        listProducts.add(product2);
-        listProducts.add(product3);
-        listProducts.add(product1);
-        listProducts.add(product2);
-        listProducts.add(product3);
-        listProducts.add(product1);
-        listProducts.add(product2);
-        listProducts.add(product3);
-        listProducts.add(product1);
-        listProducts.add(product2);
-        listProducts.add(product3);
+        listProducts.add(product4);
+        listProducts.add(product5);
+        listProducts.add(product6);
+        listProducts.add(product7);
+        listProducts.add(product8);
+        listProducts.add(product9);
+        listProducts.add(product10);
+
     }
 <<<<<<< HEAD
 }

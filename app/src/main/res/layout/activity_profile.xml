@@ -136,7 +136,7 @@
                 </LinearLayout>
 
                 <Button
-                    android:id="@+id/button2"
+                    android:id="@+id/btn_logut"
                     android:layout_width="250dp"
                     android:layout_height="wrap_content"
                     android:background="@drawable/back_logut"

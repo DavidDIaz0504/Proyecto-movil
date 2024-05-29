@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -28,6 +30,7 @@ public class ProfileActivity extends AppCompatActivity {
     private ImageSlider imageSlider;
     private RecyclerView rvProductsFav;
     private BottomNavigationView bnTienda;
+    Button btnlogut;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +38,7 @@ public class ProfileActivity extends AppCompatActivity {
         setContentView(R.layout.activity_profile);
 
         toolbar = findViewById(R.id.top_app_bar_profile);
+        btnlogut = findViewById(R.id.btn_logut);
 
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,6 +55,17 @@ public class ProfileActivity extends AppCompatActivity {
         StaggeredGridLayoutManager myStaged = new StaggeredGridLayoutManager(3, StaggeredGridLayoutManager.VERTICAL);
         rvProductsFav.setLayoutManager(myStaged);
 
+
+        btnlogut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                    Intent intent = new Intent(ProfileActivity.this, LoginActivity.class);
+                    startActivity(intent);
+                    finish();
+                }
+
+        });
     }
 
     private void loadFakeData() {
