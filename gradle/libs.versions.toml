@@ -9,8 +9,10 @@ activity = "1.8.0"
 constraintlayout = "2.1.4"
 googleServices = "4.4.1"
 firebaseFirestore = "25.0.0"
+googleGmsGoogleServices = "4.4.1"
 tensorflowLiteSupport = "0.1.0"
 tensorflowLiteMetadata = "0.1.0"
+
 
 [libraries]
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -27,4 +29,5 @@ tensorflow-lite-metadata = { group = "org.tensorflow", name = "tensorflow-lite-m
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
+googleGmsGoogleServices = { id = "com.google.gms.google-services", version.ref = "googleGmsGoogleServices" }
 

@@ -40,6 +40,7 @@ import david.alejandro.projectecomm.ml.TfliteModel;
 import com.google.android.material.appbar.MaterialToolbar;
 
 public class ScannerActivity extends AppCompatActivity {
+
     private Toolbar toolbar;
 
     TextView result, confidence;
@@ -47,14 +48,15 @@ public class ScannerActivity extends AppCompatActivity {
     Button picture;
     int imageSize = 224;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scanner);
 
-<<<<<<< HEAD
+
         // Referencia a la toolbar
-        MaterialToolbar toolbar = findViewById(R.id.tb_category);
+         toolbar = findViewById(R.id.tb_category);
 
         // Establecer la toolbar como ActionBar
         setSupportActionBar(toolbar);
@@ -63,7 +65,7 @@ public class ScannerActivity extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(v -> {
             // Finaliza la actividad
             finish();
-=======
+
         toolbar = findViewById(R.id.top_app_bar_scan);
         result = findViewById(R.id.result);
         confidence = findViewById(R.id.confidence);
@@ -88,7 +90,7 @@ public class ScannerActivity extends AppCompatActivity {
                     requestPermissions(new String[]{Manifest.permission.CAMERA}, 100);
                 }
             }
->>>>>>> David
+
         });
     }
 
