@@ -2,7 +2,8 @@
 <resources>
     <color name="light">#fbd6d2</color>
     <color name="back">#471c57</color>
-    <color name="black">#FF000000</color>
+    <color name="grey">#FF4E4848</color>
+    <color name="black">#000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="md_theme_primary">#8C4A60</color>
     <color name="md_theme_onPrimary">#FFFFFF</color>

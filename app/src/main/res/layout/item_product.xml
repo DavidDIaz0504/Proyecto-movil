@@ -14,14 +14,16 @@
         android:layout_margin="8dp"
 
         >
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
             android:orientation="vertical"
-            android:padding="8dp"
-            >
+            android:padding="8dp">
+
             <ImageView
-                android:id="@+id/iv_product"
+                android:id="@+id/iv_event"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 app:srcCompat="@drawable/anillos" />
@@ -30,6 +32,7 @@
                 android:id="@+id/tv_name_product_item"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
                 android:text="computador_asus"
                 android:textAppearance="?attr/textAppearanceTitleMedium" />
 
@@ -37,15 +40,19 @@
                 android:id="@+id/tv_name_price_item"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
                 android:text="13_000_000_00"
                 android:textAppearance="?attr/textAppearanceBodyMedium" />
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/btn_add_event"
                 style="?attr/materialButtonOutlinedStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="agregar" />
+                android:backgroundTint="@color/back"
+                android:text="agregar"
+                android:textColor="@color/light"
+                android:textSize="10sp" />
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
 </LinearLayout>

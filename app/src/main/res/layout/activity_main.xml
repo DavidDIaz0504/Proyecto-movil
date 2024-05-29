@@ -12,7 +12,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
-
         android:text="@string/comic_anime"
         android:textColor="@color/light"
         android:textSize="38dp"
@@ -39,7 +38,7 @@
             android:textSize="18dp" />
 
         <TextView
-            android:id="@+id/tv_event_main"
+            android:id="@+id/tv_event_seeall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -82,7 +81,7 @@
             android:textSize="18dp" />
 
         <TextView
-            android:id="@+id/tv_store_main"
+            android:id="@+id/tv_shop_seeall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -105,13 +104,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:menu="@menu/icnons"
-        android:background="@color/back"
-        >
-
-
-    </com.google.android.material.bottomnavigation.BottomNavigationView>
+        android:background="@drawable/bb_back"/>
 
 </LinearLayout>
+
 
 
 
